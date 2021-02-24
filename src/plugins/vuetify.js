@@ -5,19 +5,18 @@ import Vuetify from "vuetify/lib/framework";
 Vue.use(Vuetify);
 
 export default new Vuetify({
+  rtl: false,
+  breakpoint: { mobileBreakpoint: 960 },
   icons: {
     iconfont: "fa",
   },
   theme: {
     themes: {
+      light: {
+        background: "#eeeeee",
+      },
       dark: {
-        primary: "#f44336",
-        secondary: "#9c27b0",
-        accent: "#e91e63",
-        error: "#03a9f4",
-        warning: "#2196f3",
-        info: "#009688",
-        success: "#4caf50",
+        grey: "#444444",
       },
     },
   },

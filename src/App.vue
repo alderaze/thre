@@ -1,7 +1,5 @@
 <template>
-  <v-app style="height: 3000px">
-    <navbar />
-    <navv />
+  <v-app :style="{ background: $vuetify.theme.themes[theme].background }">
     <sittings />
 
     <v-main>
@@ -11,21 +9,19 @@
 </template>
 
 
-
 <script>
-import navv from "./components/layout/nav";
-import navbar from "./components/layout/navheader";
 import sittings from "./components/layout/sittings";
 
 export default {
   data() {
     return {};
   },
-  components: {
-    navv,
-    sittings,
-    navbar,
+  computed: {
+    theme() {
+      return this.$vuetify.theme.dark ? "dark" : "light";
+    },
   },
+  components: { sittings },
 };
 </script>
 
@@ -33,4 +29,7 @@ export default {
 *:not(i) {
   font-family: Roboto, sans-serif !important;
 }
+body {
+}
 </style>
+

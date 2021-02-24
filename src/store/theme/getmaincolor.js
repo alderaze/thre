@@ -10,8 +10,7 @@ const maincolor = {
       "accent--text",
       "error--text",
       "warning--text",
-      "info--text",
-      "success--text",
+      "purple--text",
     ],
     groundnav: "",
     colortext: "red--text",
@@ -81,12 +80,6 @@ const maincolor = {
       }
       return (state.maincolor = state.mycol[5]);
     },
-    color7(state) {
-      for (let i in state.color.theme.themes.light) {
-        state.mycol.push(i);
-      }
-      return (state.maincolor = state.mycol[6]);
-    },
 
     colortext1(state) {
       return (state.colortext = state.maintextcolor[0]);
@@ -106,9 +99,7 @@ const maincolor = {
     colortext6(state) {
       return (state.colortext = state.maintextcolor[5]);
     },
-    colortext7(state) {
-      return (state.colortext = state.maintextcolor[6]);
-    },
+
     setgroundnav1(state) {
       return (state.groundnav = state.color.img[0]);
     },

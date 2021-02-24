@@ -1,19 +1,30 @@
 <template>
   <div class="home">
-   asd
+    <navv />
+    <router-view></router-view>
+    <footerr class="foot" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import {mapMutations} from 'vuex'
+import navv from "../components/layout/nav";
+import footerr from "../components/home/footerr";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
+    navv,
+    footerr,
   },
-  methods: {
-    ...mapMutations('naving',['retmini'])
-  },
-}
+};
 </script>
+<style>
+.container {
+  max-width: 97%;
+}
+.foot {
+  position: absolute;
+  bottom: 0;
+}
+</style>
